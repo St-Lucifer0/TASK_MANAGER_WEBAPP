@@ -1,0 +1,22 @@
+﻿@using TaskFLow.Model
+
+<h3>ProjectItems</h3>
+<div class="project-items">
+    <h3>@(Project.Name)</h3>
+    <p>@(Project.Description)</p>
+    <p>DeadLine: @(Project.DeadLine?.ToShortDateString())</p>
+    <p>Context: @(Task.Context)</p>
+    <p>Priority: @(Project.IsPriority ? "High" : "Normal")</p>
+    <button onclick="ToggleComplete">@(Project.IsCompleted ? "Completed" : "Active")</button>
+</div>
+
+@code {
+    [Parameter] public Project project { get; set; }
+    [Parameter] public EventCallBack<Project> OnStatusChanged { get; set; }
+
+    private async Project ToggleComplete()
+    {
+        Project.IsCompleted = !Project.IsCompleted;
+        await OnStatushanged.InvokeAsync(Project);
+    }
+}

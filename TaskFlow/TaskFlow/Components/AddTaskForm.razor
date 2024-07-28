@@ -1,0 +1,53 @@
+﻿
+<EditForm Model="@newTask" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator>
+        <ValidationSummary>
+            <InputText @bind-Value="newTask.Name" placeholder="Task Name"/>
+            <InputDate @bind-Value="newTask.DeadLine"/>
+            <InputSelect @bind-Value="newTask.Context">
+                <option value="">Select Category</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Home">Home</option>
+            </InputSelect>
+            <InputCheckbox @bind-Value="newTask.IsPriority"></InputCheckbox>
+            <button type="submit">ADD</button>
+        </ValidationSummary>
+    </DataAnnotationsValidator>
+</EditForm>
+
+<EditForm Model="@newProject" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator>
+        <ValidationSummary>
+            <InputText @bind-Value="newProject.Name" placeholder="Project Name" />
+            <InputDate @bind-Value="newProject.DeadLine" />
+            <InputSelect @bind-Value="newProject.Context">
+                <option value="">Select Category</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Home">Home</option>
+            </InputSelect>
+            <InputCheckbox @bind-Value="newTask.IsPriority"></InputCheckbox>
+            <button type="submit">ADD</button>
+        </ValidationSummary>
+    </DataAnnotationsValidator>
+</EditForm>
+
+@code {
+    private Task newTask = new Task();
+    [parameter] public EventCallback<Task> OnTaskAdded{ get; set; }
+
+    private async Task HandleValidSubmit(){
+        await OnTaskAdded.InvokeAsync(newTask);
+        newTask = new Task();
+    }
+
+    private Project newProject = new Project();
+    [parameter] public EventCallback<Project> OnProjectAdded { get; set; }
+
+    private async Project HandleValidSubmit(){
+        await OnProjectAdded.InvokeAsync(newProject)
+        newProject = new Project();
+    }
+
+}

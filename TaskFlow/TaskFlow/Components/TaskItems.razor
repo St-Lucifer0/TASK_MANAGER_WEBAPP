@@ -1,0 +1,30 @@
+﻿@using TaskFlow.Model
+@* TaskItems.razor *@
+
+<h3>NEW TASK</h3>
+<div class="task-item">
+
+    @if(Task != null)
+    {
+    <h3>@(Task.Name)</h3>
+    <p>@(Task.Description)</p>
+    <p>DeadLine: @(Task.DeadLine?.ToShortDateString())</p>
+    <p>Context: @(Task.Context)</p>
+    <p>Priority: @(Task.IsPriority ? "High" : "Normal")</p>
+    <button onclick="ToggleComplete">@(Task.IsCompleted ? "Completed" : "Active")</button>
+    }
+    else{
+        <p>No task data available</p>
+    }
+</div>
+
+@code {
+    [Parameter] public Task task { get; set; }
+    [Parameter] public EventCallBack<Task> OnStatusChanged { get; set; }
+
+    private async Task ToggleComplete()
+    {
+        Task.IsCompleted = !Task.IsCompleted;
+        await OnStatushanged.InvokeAsync(Task);
+    }
+}

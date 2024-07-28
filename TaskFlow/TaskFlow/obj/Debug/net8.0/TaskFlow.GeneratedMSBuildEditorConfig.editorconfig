@@ -1,0 +1,63 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = TaskFlow
+build_property.RootNamespace = TaskFlow
+build_property.ProjectDir = C:\Users\Papa_Aki\source\repos\TaskFlow\TaskFlow\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Papa_Aki\source\repos\TaskFlow\TaskFlow
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Components/AddTaskForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZGRUYXNrRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Components/ProjectItems.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9qZWN0SXRlbXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Pages/Context.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGV4dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Pages/Priorities.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpb3JpdGllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Pages/Tasks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-brlsofiwv9
+
+[C:/Users/Papa_Aki/source/repos/TaskFlow/TaskFlow/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-sd5ycrnvi8

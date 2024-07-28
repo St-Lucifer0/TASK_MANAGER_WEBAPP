@@ -1,0 +1,45 @@
+﻿@page "/tasks"
+@using TaskFlow.Components
+@using TaskFlow.Model
+@inject TaskServices TaskSevices
+
+
+<h1>CURRENT TASKS</h1>
+
+<div class="task-list">
+    @foreach(var task in TaskServices.GetAllTasks())
+    {
+        <TaskItem Task="@task" OnStatusChanged="UpdateTask"></TaskItem>
+    }
+</div>
+
+<h1>CURRENT PROJECTS</h1>
+
+<div class="project-list">
+    @foreach(var task in TaskServices.GetAllProjects())
+    {
+        <TaskItem Task="@task" OnStatusChanged="UpdateProject"></TaskItem>
+    }
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        tasks = TaskServices.GetAllTasks.ToList();
+        projects = TaskServices.GetAllProjects.ToList();
+    }
+
+    private void UpdateTask(Task updatedTask)
+    {
+        TaskServices.UpdateTask(updatedTask);
+        StateHasChanged();
+    }
+    private void UpdateProject(Project updatedProject)
+    {
+        TaskServices.UpdateProject(updatedProject);
+        StateHasChanged();
+    }
+
+
+
+}
